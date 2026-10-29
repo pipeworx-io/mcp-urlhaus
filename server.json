@@ -3,7 +3,7 @@
   "name": "io.github.pipeworx-io/urlhaus",
   "title": "Urlhaus",
   "description": "URLhaus MCP — wraps abuse.ch URLhaus malware URL database (free, no auth)",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "websiteUrl": "https://pipeworx.io/packs/urlhaus",
   "repository": {
     "url": "https://github.com/pipeworx-io/mcp-urlhaus",

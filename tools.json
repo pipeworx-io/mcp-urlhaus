@@ -1,0 +1,66 @@
+[
+  {
+    "name": "lookup_url",
+    "description": "Look up a URL in the URLhaus malware database to check if it is known to host or distribute malware. Returns threat category, status, blacklist status, and tags.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "url": {
+          "type": "string",
+          "description": "The full URL to look up (e.g. \"http://example.com/malware.exe\")."
+        }
+      },
+      "required": [
+        "url"
+      ]
+    }
+  },
+  {
+    "name": "lookup_host",
+    "description": "Look up a hostname or IP address in the URLhaus database to find associated malware URLs. Returns all known malicious URLs hosted on that host.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "host": {
+          "type": "string",
+          "description": "Hostname or IP address to look up (e.g. \"example.com\" or \"192.168.1.1\")."
+        }
+      },
+      "required": [
+        "host"
+      ]
+    }
+  },
+  {
+    "name": "get_recent",
+    "description": "Get a list of recently submitted malware URLs from URLhaus. Useful for monitoring the latest threats.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "limit": {
+          "type": "number",
+          "description": "Number of recent URLs to return (default 10, max 1000)."
+        }
+      },
+      "required": []
+    }
+  },
+  {
+    "name": "lookup_payload",
+    "description": "Look up a malware payload file by its MD5 or SHA256 hash in the URLhaus database. Returns file type, size, first/last seen dates, and associated delivery URLs.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "md5_hash": {
+          "type": "string",
+          "description": "MD5 hash of the payload to look up (32 hex characters)."
+        },
+        "sha256_hash": {
+          "type": "string",
+          "description": "SHA256 hash of the payload to look up (64 hex characters)."
+        }
+      },
+      "required": []
+    }
+  }
+]

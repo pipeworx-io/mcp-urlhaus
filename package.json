@@ -1,12 +1,20 @@
 {
   "name": "@pipeworx/mcp-urlhaus",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "description": "URLhaus MCP — wraps abuse.ch URLhaus malware URL database (free, no auth)",
   "type": "module",
-  "main": "src/index.ts",
-  "types": "src/index.ts",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./tools.json": "./tools.json",
+    "./package.json": "./package.json"
+  },
   "bin": {
     "mcp-urlhaus": "bin/cli.js"
+  },
+  "files": ["bin/", "lib/", "tools.json", "server.json"],
+  "engines": {
+    "node": ">=18"
   },
   "keywords": ["mcp", "mcp-server", "model-context-protocol", "pipeworx", "urlhaus"],
   "license": "MIT",
@@ -14,19 +22,12 @@
     "type": "git",
     "url": "git+https://github.com/pipeworx-io/mcp-urlhaus.git"
   },
-  "scripts": {
-    "typecheck": "tsc --noEmit"
-  },
-  "dependencies": {
-    "@modelcontextprotocol/sdk": "^1.30.0",
-    "tsx": "^4.19.0"
-  },
-  "devDependencies": {
-    "typescript": "^5.9.3",
-    "@cloudflare/workers-types": "^4.20260405.1"
-  },
+  "mcpName": "io.github.pipeworx-io/urlhaus",
   "pipeworx": {
-    "sourceHash": "v1-37be3762c3a2742e7ec8a7bf20f66ce5c237351ccb2a0b26b77b05cfd8e38573",
-    "sourceCommit": "66a0692f029179984440cef6938cba7fdd41d66d"
+    "mode": "gateway",
+    "slug": "urlhaus",
+    "gatewaySlug": "urlhaus",
+    "sourceHash": "v1-9cddad6a12e8d1b2ecfcbd9cb98f0cdbab49272eac76d953540436f5563449bd",
+    "sourceCommit": "98853f34516646cb7c4c1460f09249b262c0269e"
   }
 }
