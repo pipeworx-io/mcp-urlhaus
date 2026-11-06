@@ -1,6 +1,6 @@
 {
   "name": "@pipeworx/mcp-urlhaus",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "URLhaus MCP — wraps abuse.ch URLhaus malware URL database (free, no auth)",
   "type": "module",
   "main": "lib/index.js",
@@ -27,7 +27,7 @@
     "mode": "gateway",
     "slug": "urlhaus",
     "gatewaySlug": "urlhaus",
-    "sourceHash": "v1-9cddad6a12e8d1b2ecfcbd9cb98f0cdbab49272eac76d953540436f5563449bd",
-    "sourceCommit": "98853f34516646cb7c4c1460f09249b262c0269e"
+    "sourceHash": "v1-36ae38bf4ea3d79ed1db6f1503a57e26f13448b95c42f4b0f550d84018934c1a",
+    "sourceCommit": "ca52e7ed1e1ccad897c2da1b0fa105edc0bc3b2e"
   }
 }
